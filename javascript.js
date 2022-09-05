@@ -2,7 +2,9 @@ const body = document.querySelector("body");
 const container = document.querySelector("#container");
 let gridsize = 0;
 const button = document.createElement("button");
+button.classList.add("button");
 button.innerText = "Create a new grid";
+body.insertBefore(button, container);
 button.addEventListener("click", () => {
   function buttonclick() {
     gridWidth = prompt(
@@ -16,7 +18,6 @@ button.addEventListener("click", () => {
   }
   buttonclick();
 });
-body.appendChild(button);
 
 function reset(gridWidth) {
   while (container.firstChild) {
