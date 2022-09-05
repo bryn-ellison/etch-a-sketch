@@ -4,8 +4,17 @@ let gridsize = 0;
 const button = document.createElement("button");
 button.innerText = "Create a new grid";
 button.addEventListener("click", () => {
-  gridWidth = prompt("What size grid do you want? (enter width, maximum 100)");
-  reset(gridWidth);
+  function buttonclick() {
+    gridWidth = prompt(
+      "What size grid do you want? (enter width, maximum 100)"
+    );
+    if (gridWidth > 100) {
+      alert("Please enter a width under 100");
+      buttonclick();
+    }
+    reset(gridWidth);
+  }
+  buttonclick();
 });
 body.appendChild(button);
 

@@ -5,7 +5,7 @@
 }
 
 #container {
-    width: 100%;
+    width: 960px;
     margin: 0 auto;
     display: grid;
     grid-auto-flow: column;
