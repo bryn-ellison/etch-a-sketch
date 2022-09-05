@@ -3,7 +3,7 @@ const container = document.querySelector("#container");
 let gridsize = 0;
 const button = document.createElement("button");
 button.classList.add("button");
-button.innerText = "Create a new grid";
+button.innerText = "Create a new sketch";
 body.insertBefore(button, container);
 button.addEventListener("click", () => {
   function buttonclick() {
@@ -33,6 +33,7 @@ function createGrid(gridWidth) {
     const div = document.createElement("div");
     document.documentElement.style.setProperty("--rowNum", gridWidth);
     div.classList.add("grid-square");
+    container.classList.add("container");
     div.addEventListener("mouseenter", (e) => {
       div.classList.add("hover");
     });
